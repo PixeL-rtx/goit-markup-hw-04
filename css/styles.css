@@ -254,6 +254,8 @@ ul {
 
 }
 
+
+
 .icon {
    fill: none;
 }
@@ -355,13 +357,6 @@ ul {
     
  }
  
- /* .team-cont-list {
-    display: flex;
-    justify-content: center;
-    flex-direction:row;
-    gap: 24px;
-    
- } */
  .icon-lists {             
    width:40px;
    height:40px;
