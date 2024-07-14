@@ -28,6 +28,8 @@ ul {
 /* header */
 
 .header {
+   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+      background: #fff;
    border-bottom: 1px solid #e7e9fc;
 }
 .container {
@@ -131,6 +133,7 @@ ul {
     text-decoration: none;
     line-height: 1.5;
     letter-spacing: 0.02em;
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .adresses-nav .link-adres:hover,
@@ -146,13 +149,14 @@ ul {
 
 .page-title {
    background-image: linear-gradient(to bottom,
-   rgba(46, 47, 66, 0.7)
-   ,rgba(46, 47, 66, 0.7)),
-    url(../images/people-office\ 1\ \(1\).jpg);
+   rgba(46, 47, 66, 0.7),
+   rgba(46, 47, 66, 0.7)),
+    url(../images/people-office1.jpg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
     background-color: #2E2F42;
+    max-width: 1440px;
     min-width: 1158px;
     margin: 0 auto;
     padding: 188px 0;
@@ -185,6 +189,7 @@ ul {
     padding: 16px 32px;
     border-radius: 4px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-title .reservation:hover,
 .page-title .reservation:focus {
@@ -195,6 +200,11 @@ ul {
    max-width: 1158px;
    margin: 0 auto;
    padding: 0 15px ;
+}
+.benefites-div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .visually-hidden {
    position: absolute;
@@ -225,6 +235,7 @@ ul {
    position: relative;
    display: flex;
 }
+
 .benefites-icon {
    border: 1px solid #8e8f99;
    border-radius: 4px;
@@ -308,10 +319,13 @@ ul {
     margin-bottom: 32px;
     border-radius: 0 0 4px 4px;
     width: calc((100% - 3 * 24px) / 4);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
      
  }
  .info {
-    
+   
     margin-top: 32px;
     margin-bottom: 8px;
     text-align: center;
@@ -339,6 +353,7 @@ ul {
     color: #434455;
     
  }
+ 
  .icon-lists {
  }
 
@@ -393,11 +408,46 @@ ul {
    
  }
  .card {
-    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: calc((100% - 2 * 24px) / 3);
     
-
  }
+ .card:hover,
+ .card:focus .text-image {
+   transform: translateY(0);
+   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
+ }
+.image-div {
+   position: relative;
+  overflow: hidden;
+}
+.card:hover .text-image {
+   transform: translateY(0);
+}
+.text-image {
+   position: absolute;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px 164px;
+    background-color: #4d5ae5;
+    color: #f4f4fd;
+    font-family: sans-serif;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+ 
  .portfolio-title .title-port {
     font-family: "Roboto", sans-serif;
     font-size: 36px;
@@ -408,11 +458,15 @@ ul {
     letter-spacing: 0.02em;
     text-transform: capitalize;
  }
+
  .apps-info {
-   padding: 32px 16px;
-   border: 1px solid #e7e9fc;
-   border-top: none;
-   margin-bottom: 8px;
+   border-bottom: 1px solid #e7e9fc;
+      border-left: 1px solid #e7e9fc;
+      border-right: 1px solid #e7e9fc;
+   
+      width: 360px;
+      height: 120px;
+      
  }
  
   .apps {
@@ -422,8 +476,8 @@ ul {
     line-height: 1.2;
     color: #2E2F42;
     letter-spacing: 0.02em;
-    margin-top: 32px;
-    margin-bottom: 8px;
+    padding-top: 32px;
+    margin: 0 8px 16px;
  }
  .texts {
     font-family: "Roboto", sans-serif;
@@ -432,6 +486,7 @@ ul {
     line-height: 1.5;
     color: #434455;
     letter-spacing: 0.02em;
+    margin: 0 0 8px 16px;
 
  }
  /* footer  */ 
